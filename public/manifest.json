@@ -1,11 +1,23 @@
 {
   "short_name": "Linkedin Ad Remover",
   "name": "Linkedin Ad Remover",
-  "description": "Linkedin Ad Remover - Focus on relevant posts",
+  "description": "Focus on relevant posts by removing promoted job posts on LinkedIn search page",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
-    "default_popup": "index.html"
+    "default_popup": "index.html",
+    "default_icon": {
+        "16": "/images/16x16.png",
+        "32": "/images/32x32.png",
+        "48": "/images/48x48.png",
+        "128": "/images/128x128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/16x16.png",
+    "32": "/images/32x32.png",
+    "48": "/images/48x48.png",
+    "128": "/images/128x128.png"
   },
   "content_scripts": [
     {
