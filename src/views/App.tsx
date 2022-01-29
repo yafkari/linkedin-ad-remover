@@ -12,26 +12,24 @@ export default function App() {
     }
 
     const handleToggle = async () => {
+        await chrome.storage.local.set({[KEY]: !active});
         const tabId = await getCurrentTab();
 
         // If was not active, becomes active and starts removing all promoted posts
-        if(!active) {
-            if (tabId === -1) return console.log("Couldn't run removal script.")
-
+        if(!active && tabId !== -1) {
             chrome.scripting.executeScript({
                 target: { tabId },
                 files: ['content_script.js']
             })
-
         }
-        chrome.storage.sync.set({KEY: !active});
+
         setActive(!active)
     }
 
     useEffect(() => {
         const getActive = async (): Promise<void> => {
-            const isActive = await chrome.storage.sync.get(KEY)
-            setActive(isActive[KEY] as boolean);
+            const isActive = await chrome.storage.local.get(KEY)
+            if (Object.keys(isActive).length !== 0) setActive(isActive[KEY]);
         }
 
         void getActive();
