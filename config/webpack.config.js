@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const TsConfigPathsPlugin = require("tsconfig-paths-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -8,12 +9,14 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "../dist"),
-    filename: "[name].js",
+    filename: "[name].bundle.js",
+    clean: true,
   },
   module: {
     rules: [
+      { test: /\.(ts|tsx)$/, loader: 'ts-loader', exclude: /node_modules/ },
       {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(js|jsx)$/,
         use: {
           loader: "babel-loader",
           options: {
@@ -40,4 +43,10 @@ module.exports = {
       patterns: [{ from: "public" }],
     }),
   ],
+  resolve: {
+    extensions: [".tsx", ".ts", ".jsx", ".js"],
+    enforceExtension: false,
+    fullySpecified: false,
+    plugins: [new TsConfigPathsPlugin()]
+  },
 };

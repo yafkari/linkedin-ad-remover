@@ -1,0 +1,41 @@
+
+
+.ToggleBtn {
+  width: 80px;
+  height: 40px;
+  margin: 10px;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  &.active {
+    .round-btn {
+      left: 45px;
+    }
+  }
+  .round-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    margin-top: -15px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .value {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+}

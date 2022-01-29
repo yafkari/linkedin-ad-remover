@@ -7,6 +7,8 @@ parser: "@typescript-eslint/parser"
 plugins:
   - "@typescript-eslint"
   - jest
+  - prettier
+  - react
 rules:
   no-shadow: off
   "@typescript-eslint/no-shadow":
@@ -18,9 +20,17 @@ rules:
     - warn
     - extensions:
         - .tsx
+  react/jsx-uses-react: off
+  quotes:
+    - 2
+    - single
+  import/extensions: off
 env:
   browser: true
   jest/globals: true
+  node: true
+  commonjs: true
+  webextensions: true
 settings:
   react:
     pragma: React

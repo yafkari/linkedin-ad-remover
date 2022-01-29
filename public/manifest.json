@@ -1,10 +1,17 @@
 {
-  "short_name": "Chrome extension boilerplate.",
-  "name": "Chrome extension React boilerplate",
-  "description": "Simple Chrome extension React boilerplate",
+  "short_name": "Linkedin Ad Remover",
+  "name": "Linkedin Ad Remover",
+  "description": "Linkedin Ad Remover - Focus on relevant posts",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.linkedin.com/jobs/search/"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "permissions": ["storage", "activeTab", "scripting"]
 }
