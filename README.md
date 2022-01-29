@@ -1,9 +1,6 @@
-# Simple Chrome extension React boilerplate
+# Linkedin Ad Remover
 
-This is a simple chrome extension boilerplate made in React to use as a default structure for your future project.
-The purpose is to provide as basic and as useful as possible basic structure to get started as quick as possible.
-
-Of course, some parts may not suits you, but most of the basic redundant work is already done.
+Linkedin Ad Remover is a small chrome extension that allows to remove all promoted job posts on a linkedin search. 
 
 ## Usage
 - `yarn dev`: runs webpack with development environment.
@@ -16,9 +13,9 @@ Of course, some parts may not suits you, but most of the basic redundant work is
 Clone repo
 
 ```
-git clone https://github.com/yafkari/chrome-extension-react-boilerplate.git
+git clone git@github.com:yafkari/linkedin-ad-remover.git
 ```
-Move to `chrome-extension-react-boilerplate` directory and run
+Move to `linkedin-ad-remover` directory and run
 
 ```
 yarn install
