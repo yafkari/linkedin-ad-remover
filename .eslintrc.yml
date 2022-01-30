@@ -21,6 +21,7 @@ rules:
     - extensions:
         - .tsx
   react/jsx-uses-react: off
+  react/react-in-jsx-scope: off
   quotes:
     - 2
     - single

@@ -12,4 +12,5 @@ async function removePromotedPosts() {
     }
 }
 
+removePromotedPosts();
 document.addEventListener('DOMNodeInserted', removePromotedPosts);
