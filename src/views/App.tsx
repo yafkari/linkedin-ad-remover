@@ -14,7 +14,7 @@ export default function App() {
   const runScript = async (): Promise<void> => {
     const tabId = await getCurrentTab();
 
-    if (tabId !== 1) {
+    if (tabId !== -1) {
       chrome.scripting.executeScript({
         target: { tabId },
         files: ['content_script.js']
