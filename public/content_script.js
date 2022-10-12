@@ -4,10 +4,10 @@ async function removePromotedPosts() {
     var isEmpty = Object.keys(value).length === 0;
 
     if (isEmpty || (!isEmpty && value[key] === true)) {
-        var nodes = document.getElementsByClassName('t-12 t-normal t-black--light job-card-container__footer-item');
+        var nodes = document.getElementsByClassName('job-card-container__footer-item inline-flex align-items-center');
 
-        Array.from(nodes).forEach(element => {
-            element.parentNode.parentNode.remove();
+        Array.from(nodes).filter(node => !node.classList.contains('job-card-container__apply-method')).forEach(element => {
+            element.parentNode.parentNode.parentNode.parentNode.remove();
         })
     }
 }
