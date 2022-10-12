@@ -25,5 +25,9 @@
       "js": ["content_script.js"]
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["*://*.linkedin.com/jobs/search/"],
   "permissions": ["storage", "activeTab", "scripting"]
 }
