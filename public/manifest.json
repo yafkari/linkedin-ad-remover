@@ -2,7 +2,7 @@
   "short_name": "Linkedin Ad Remover",
   "name": "Linkedin Ad Remover",
   "description": "Focus on relevant posts by removing promoted job posts on LinkedIn search page",
-  "version": "1.0",
+  "version": "2.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
@@ -25,5 +25,9 @@
       "js": ["content_script.js"]
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["*://*.linkedin.com/jobs/search/"],
   "permissions": ["storage", "activeTab", "scripting"]
 }
