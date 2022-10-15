@@ -2,7 +2,7 @@
   "short_name": "Linkedin Ad Remover",
   "name": "Linkedin Ad Remover",
   "description": "Focus on relevant posts by removing promoted job posts on LinkedIn search page",
-  "version": "2.0",
+  "version": "2.1",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",

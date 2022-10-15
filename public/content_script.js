@@ -1,3 +1,5 @@
+const hasNumber = str => /\d/.test(str);
+
 async function removePromotedPosts() {
     var key = 'linkedin-remove-promoted';
     const value = await chrome.storage.local.get(key);
@@ -8,6 +10,7 @@ async function removePromotedPosts() {
 
         Array.from(nodes)
             .filter(node => !node.classList.contains('job-card-container__apply-method'))
+            .filter(node => !hasNumber(node.innerText))
             .map(n => n.parentNode.parentNode.parentNode.parentNode.remove());
     }
 }
