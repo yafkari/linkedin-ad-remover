@@ -1,4 +1,4 @@
-const hasNumber = str => /\d/.test(str);
+function hasNumber(str) { return /\d/.test(str) }
 
 async function removePromotedPosts() {
     var key = 'linkedin-remove-promoted';
@@ -6,7 +6,7 @@ async function removePromotedPosts() {
     var isEmpty = Object.keys(value).length === 0;
 
     if (isEmpty || (!isEmpty && value[key] === true)) {
-        var nodes = document.getElementsByClassName('job-card-container__footer-item inline-flex align-items-center');
+        var nodes = document.getElementsByClassName('job-card-container__footer-item');
 
         Array.from(nodes)
             .filter(node => !node.classList.contains('job-card-container__apply-method'))
