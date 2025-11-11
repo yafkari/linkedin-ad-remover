@@ -1,7 +1,7 @@
 {
-  "name": "chrome-extension-react-boilerplate",
+  "name": "linkedin-sponsored-post-remover",
   "version": "1.0.0",
-  "description": "Simple Chrome extension React boilerplate.",
+  "description": "LinkedIn Sponsored Post Remover",
   "repository": "git@github.com:yafkari/chrome-extension-react-boilerplate.git",
   "author": "yafkari",
   "license": "MIT",
